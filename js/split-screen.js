@@ -48,9 +48,10 @@ fetch(url)
 
 			function keepUpdating(){
 			var dayPercent = daylight/dayInSeconds;
+			var dayIncrement = dayPercent * window.innerWidth;
 			counter = counter + dayOffSet;
 			if (counter <= daylight){
-				counter += dayPercent * window.innerWidth;
+				counter += dayIncrement
 				// counter += 1000;
 				delta = (window.innerWidth + counter) * 0.5;
 				topLayer.style.width = skew + delta + 'px';
