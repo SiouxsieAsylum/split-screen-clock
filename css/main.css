@@ -1,0 +1,154 @@
+/*clock code*/
+.clockDisplay {
+	margin: 3vw 2.5vw;
+	height: 40vh;
+	width: 90vh;
+	border: 6px solid white;
+	box-shadow:inset 0px 0px 50px rgb(246, 255, 0), inset 0px 0px 100px rgb(255, 235, 122), 0px 0px 50px rgb(246, 255, 0), 0px 0px 100px rgb(255, 235, 122);
+	justify-content: space-around;
+	display: flex;
+	flex-flow: row wrap;
+
+}
+
+.bottom .clockDisplay {
+	box-shadow:inset 0px 0px 50px rgb(56, 162, 255), inset 0px 0px 100px rgb(150, 206, 255), 0px 0px 50px rgb(56, 162, 255), 0px 0px 100px rgb(150, 206, 255);
+}
+
+.clockBorder {
+	min-height: 50vh;
+	min-width: 100vh;
+	background-color: rgba(0,0,0,0.7);
+	transform: translate(-50%, -30%);
+	border: 6px solid white;
+	box-shadow:inset 0px 0px 25px rgb(246, 255, 0), inset 0px 0px 50px rgb(255, 235, 122), 0px 0px 25px rgb(246, 255, 0), 0px 0px 50px rgb(255, 235, 122);
+}
+
+button {
+	text-shadow: 0px 0px 10px rgb(255, 235, 122);
+	padding: 0 7vw 0 7vw;
+	margin-bottom: 2.75vh;
+	color: white;
+	font-size: 5vh;
+	background-color: rgba(255,255,255,0.0);
+	border: 6px solid white;
+	box-shadow:inset 0px 0px 50px rgb(246, 255, 0), inset 0px 0px 100px rgb(255, 235, 122), 0px 0px 50px rgb(246, 255, 0), 0px 0px 100px rgb(255, 235, 122);
+}
+
+.bottom button {
+	text-shadow: 0px 0px 10px rgb(56, 162, 255);
+	box-shadow:inset 0px 0px 50px rgb(56, 162, 255), inset 0px 0px 100px rgb(150, 206, 255), 0px 0px 50px rgb(56, 162, 255), 0px 0px 100px rgb(150, 206, 255);
+}
+
+.times {
+	padding: .5vw;
+	align-self: center;
+	font-size: 15vh;
+	color: white;
+	text-shadow: 0px 0px  10px rgb(246, 255, 0);
+	height: auto;
+	width: auto;
+	overflow-x: hidden;
+}
+
+.bottom .times {
+	text-shadow: 0px 0px 10px rgb(56, 162, 255);
+}
+
+
+
+
+
+
+
+/*split screen code*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Orbitron', sans-serif;
+	overflow: hidden;
+}
+
+#wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.layer {
+	position: absolute;
+	width:100vw;
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+
+.content-wrap {
+	position: absolute;
+	width: 100vw;
+	min-height: 100vh;
+	transition: 5s;
+}
+
+.content-body {
+
+
+	width: 25%;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	text-align: center;
+	transform: translateY(-50%);
+	
+	/*color: white;*/
+}
+
+
+.bottom .clockBorder {
+	box-shadow:inset 0px 0px 25px rgb(56, 162, 255), inset 0px 0px 50px rgb(150, 206, 255), 0px 0px 25px rgb(56, 162, 255), 0px 0px 50px rgb(150, 206, 255);
+} 
+
+
+.bottom {
+	background: #222;
+	/*background-image:url(../images/nighttime/gabriele-motter-227215.jpg);*/
+	background-size: cover;
+	/*background-position: center;*/
+	background-repeat: no-repeat;
+	z-index: 1;
+}
+
+
+.top {
+	background-color: #eee;
+	/*background-image:url(../images/daytime/jamie-street-100013.jpg);*/
+	z-index:2;
+	width: 50vw;
+}
+
+
+.skewed .top{
+	transform: skew(-30deg);
+	margin-left: -1000px;
+	width: calc(50vw + 1000px);
+}
+
+.skewed .top .content-wrap {
+	transform: skew(30deg);
+	margin-left: 1000px;
+}
+
+
+
+
+
+/*too small? change the font size
+@media(max-width: 768px){
+	body{
+		font-size: 75%
+	}
+}
+
